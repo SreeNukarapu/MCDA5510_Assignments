@@ -80,4 +80,9 @@ public class MySQLAccess {
 
 	}
 
+	public void updateTransaction(Connection connection,Transaction trxn) {
+		// DO the update SQL here
+		
+	}
+
 }
