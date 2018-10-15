@@ -1,3 +1,4 @@
+package com.dpenny.mcda5510.dao;
 
 /**
  * Original source code from 
@@ -6,46 +7,22 @@
 **/
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.dpenny.mcda5510.entity.Transaction;
+
 public class MySQLAccess {
 
-	public Connection setupConnection() throws Exception {
 
-		Connection connection = null;
-		try {
-			// This will load the MySQL driver, each DB has its own driver
-			// Class.forName("com.mysql.jdbc.Driver");
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			// Setup the connection with the DB
-
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/transactoins?" // DTP
-																							// I
-																							// spelled
-																							// transactoins
-																							// wrong
-																							// oops
-					+ "user=root&password=db123456" // Creds
-					+ "&useSSL=false" // b/c localhost
-					+ "&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"); // timezone
-
-		} catch (Exception e) {
-			throw e;
-		} finally {
-
-		}
-		return connection;
-	}
 
 	public Collection<Transaction> getAllTransactions(Connection connection) {
 		Statement statement = null;
 		ResultSet resultSet = null;
-		Collection<Transaction> results = null;
+		Collection<Transaction> results = new ArrayList<Transaction>();
 		// Result set get the result of the SQL query
 		try {
 			// Statements allow to issue SQL queries to the database

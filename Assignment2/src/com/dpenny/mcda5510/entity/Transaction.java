@@ -1,9 +1,11 @@
+package com.dpenny.mcda5510.entity;
 
-public class Transaction {
+public class Transaction{
 
 	private String nameOnCard;
 	
 	private String cardNumber;
+	
 	
 	public String getCardNumber() {
 		return cardNumber;
@@ -27,6 +29,7 @@ public class Transaction {
 		return results;
 
 	}
+
 	
 	
 }
