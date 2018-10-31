@@ -9,18 +9,15 @@
 // First Name
 // Last Name
 // Street Number
+// Street
 // City
+// 
 // Province
 // Country  == Canada ( Simply insert "canada")
-// Postal Code  ( they can be read form a file for this example if you choose, or generate if you wish)
-// Phone Number ( they can be read form a file for this example if you choose, or generate if you wish)
-// email Address ( Append firstname.lastname against a series for domain names read for a file
-//
-// Please always try to write clean and readable code
-// Here is a good reference doc http://ricardogeek.com/docs/clean_code.html  
-// Submit to Bitbucket under Assignment1
-
+// Postal Code  
 // 
+// Generate 20 records in the file, submit end of class
+
 
 using System;
 using System.IO;
@@ -43,6 +40,8 @@ namespace MSCDA5510
         public ContactGenerator()
         {
             String COMMA = ",";
+
+            //TODO replace with your local location
             String outputFileName = @"C:\Users\dpenny\Desktop\FileWrite\ConsoleApp1\ConsoleApp1\customers.csv";
 
             if (File.Exists(outputFileName))
